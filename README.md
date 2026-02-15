@@ -4,7 +4,7 @@ Smart Care is a patient triage and care prioritization system designed to suppor
 
 This project was developed as part of the **Kanini Hackathon (Chennai)**.
 
-![Smart Care – Application Home](assets/smart_care_home.png)
+![Smart Care – Application Home](smart_care_home.png)
 ---
 
 ## 🩺 What Smart Care Does
