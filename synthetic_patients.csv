@@ -1,0 +1,501 @@
+Age,Gender,Heart_Rate,Systolic_BP,Temperature,Symptoms,Pre_Existing_Conditions,Risk_Level
+82,Male,53,125,98.0,fever,"diabetes, asthma",Low
+55,Male,53,101,97.7,"chest pain, headache, fever","heart disease, diabetes",Medium
+58,Female,50,110,101.6,"headache, fever",none,Low
+44,Male,61,138,96.8,"headache, fatigue",none,Low
+59,Male,98,100,100.4,"dizziness, headache, fever","diabetes, heart disease",Low
+85,Male,87,100,102.8,fatigue,heart disease,Medium
+82,Female,70,137,98.8,"headache, dizziness, fatigue","diabetes, asthma",Low
+82,Male,118,121,97.3,"headache, dizziness","hypertension, asthma",Medium
+42,Male,79,94,102.4,"headache, chest pain",none,Medium
+73,Female,77,173,100.0,"nausea, fever, cough",none,Medium
+32,Female,124,144,103.2,"dizziness, fever",none,Medium
+66,Female,61,96,102.9,cough,"heart disease, asthma",Medium
+9,Female,98,166,104.0,"headache, nausea, chest pain","diabetes, asthma",Medium
+69,Female,132,133,96.9,"cough, breathlessness",none,Medium
+34,Male,114,103,103.0,"breathlessness, fever",hypertension,Medium
+70,Male,126,131,99.9,dizziness,hypertension,Medium
+8,Male,122,100,96.7,"fever, fatigue","hypertension, diabetes",Low
+85,Female,120,111,98.1,"fatigue, fever, headache","hypertension, asthma",Medium
+40,Female,135,173,99.0,"nausea, chest pain, fever",none,Medium
+9,Female,52,165,100.4,"breathlessness, chest pain, fatigue","diabetes, heart disease",Medium
+9,Male,92,99,100.1,"nausea, fever","hypertension, asthma",Low
+74,Female,81,150,102.5,fever,none,Medium
+85,Female,95,144,99.3,"chest pain, dizziness, fatigue","diabetes, heart disease",Medium
+52,Female,63,121,97.5,"nausea, fever, breathlessness",none,Low
+36,Female,81,99,99.5,"fever, chest pain, dizziness","diabetes, heart disease",Medium
+31,Male,102,152,99.9,"chest pain, fever",diabetes,Medium
+50,Female,108,126,99.4,"nausea, fever, fatigue",hypertension,Low
+8,Male,90,97,96.4,"cough, chest pain","diabetes, heart disease",Medium
+9,Male,136,120,99.2,"breathlessness, headache, fatigue",none,Low
+80,Male,103,174,100.7,"dizziness, cough, fever","asthma, diabetes",Medium
+34,Female,66,175,101.2,"dizziness, fatigue",none,Medium
+2,Female,129,162,104.0,breathlessness,"asthma, diabetes",Medium
+45,Male,81,137,98.3,"headache, nausea","diabetes, asthma",Low
+71,Female,134,103,103.5,headache,none,Medium
+14,Male,84,126,100.8,"dizziness, fever, nausea","asthma, heart disease",Low
+63,Female,56,101,101.1,"chest pain, nausea",hypertension,Medium
+82,Female,70,146,100.4,"chest pain, nausea",none,Medium
+89,Male,119,94,102.7,"cough, breathlessness, fever",none,Medium
+40,Female,55,135,97.7,fever,heart disease,Low
+80,Male,80,110,103.8,fatigue,none,Medium
+23,Female,102,175,102.9,headache,none,Medium
+90,Male,98,94,102.9,breathlessness,asthma,Medium
+40,Male,78,93,101.3,"dizziness, cough",none,Low
+36,Female,132,155,99.2,"dizziness, chest pain, fatigue",hypertension,Medium
+75,Female,54,103,100.8,"dizziness, breathlessness","diabetes, hypertension",Low
+74,Male,82,95,101.7,breathlessness,heart disease,Medium
+9,Female,129,130,101.3,headache,"asthma, heart disease",Medium
+53,Female,101,179,98.4,breathlessness,heart disease,Medium
+87,Male,128,162,98.4,"chest pain, cough, fatigue",none,High
+56,Female,109,146,99.5,nausea,"hypertension, asthma",Low
+11,Female,115,174,101.1,"fever, fatigue",none,Medium
+87,Female,78,115,97.2,breathlessness,diabetes,Low
+59,Female,130,163,97.6,"fatigue, breathlessness, nausea",none,Medium
+19,Male,63,144,97.8,"nausea, chest pain, headache",none,Low
+16,Female,67,149,101.3,"dizziness, fatigue, breathlessness","heart disease, asthma",Medium
+58,Male,110,147,98.1,headache,"heart disease, asthma",Low
+31,Female,106,99,101.7,headache,asthma,Low
+70,Male,67,109,97.9,"cough, dizziness, fever",none,Low
+54,Female,92,159,99.7,breathlessness,heart disease,Medium
+75,Male,123,138,99.8,"headache, fatigue",heart disease,Medium
+69,Male,112,118,98.2,"chest pain, breathlessness",heart disease,High
+22,Female,66,169,100.3,"chest pain, nausea","heart disease, diabetes",Medium
+60,Male,56,123,99.0,nausea,asthma,Low
+49,Female,103,122,102.7,"chest pain, dizziness","diabetes, hypertension",Medium
+29,Male,133,95,102.0,breathlessness,none,Medium
+80,Male,80,106,99.8,breathlessness,asthma,Low
+48,Male,127,167,103.7,"fever, fatigue, nausea",diabetes,Medium
+75,Male,89,163,101.4,"fatigue, dizziness",none,Medium
+10,Male,63,179,102.2,"fever, fatigue, headache",none,Medium
+45,Female,134,137,96.6,"dizziness, chest pain, breathlessness",diabetes,Medium
+56,Female,131,148,101.7,"cough, dizziness","asthma, heart disease",Medium
+69,Female,109,145,102.6,"headache, cough, fever",none,Medium
+36,Female,81,149,100.6,"fatigue, cough, chest pain",asthma,Low
+24,Female,77,135,102.4,"headache, nausea","asthma, heart disease",Medium
+2,Male,60,120,101.8,"breathlessness, dizziness",heart disease,Medium
+58,Male,61,127,97.8,"breathlessness, cough, dizziness","asthma, hypertension",Low
+71,Female,104,160,98.6,"nausea, cough, fatigue",hypertension,Medium
+16,Male,90,105,101.9,"cough, fever, fatigue","heart disease, hypertension",Medium
+76,Female,62,114,98.4,"cough, nausea",none,Low
+69,Male,85,95,103.8,"headache, dizziness, fever","heart disease, diabetes",Medium
+2,Female,110,151,99.5,chest pain,heart disease,Medium
+15,Male,101,152,96.6,"chest pain, fever, fatigue","asthma, diabetes",Medium
+32,Male,121,143,100.9,"breathlessness, fatigue, headache",heart disease,Medium
+57,Female,125,144,98.4,"chest pain, headache, dizziness",none,Medium
+27,Male,83,174,96.6,cough,"diabetes, heart disease",Medium
+1,Female,107,178,100.8,"chest pain, fever",asthma,Medium
+90,Female,59,177,97.9,"breathlessness, nausea",none,Medium
+70,Male,132,109,103.3,fever,none,Medium
+22,Female,126,162,103.4,"fever, breathlessness","asthma, heart disease",High
+52,Female,114,159,100.0,chest pain,asthma,Medium
+78,Female,53,101,97.8,"chest pain, fatigue, dizziness",diabetes,Medium
+23,Female,116,173,99.5,"cough, headache",heart disease,Medium
+12,Female,94,142,98.7,"fever, fatigue, nausea",heart disease,Low
+89,Female,86,174,103.6,"chest pain, breathlessness, nausea",asthma,High
+42,Male,101,155,102.6,nausea,diabetes,Medium
+25,Female,129,153,101.0,breathlessness,hypertension,Medium
+37,Female,139,152,97.0,"breathlessness, dizziness, fever",diabetes,Medium
+71,Female,61,118,103.9,nausea,none,Medium
+83,Male,113,127,100.1,"fatigue, nausea",heart disease,Medium
+32,Female,120,108,99.1,"cough, fatigue, chest pain",heart disease,Medium
+44,Female,50,126,101.8,"nausea, fatigue, fever",heart disease,Medium
+45,Female,120,159,99.0,"breathlessness, dizziness",none,Medium
+74,Female,79,142,96.3,"nausea, dizziness, breathlessness",hypertension,Low
+64,Male,66,154,103.7,"fever, fatigue",diabetes,Medium
+68,Female,51,108,99.3,"cough, chest pain, breathlessness",asthma,Medium
+80,Female,133,100,102.8,"fatigue, cough, dizziness","heart disease, asthma",High
+5,Male,80,170,101.5,"breathlessness, dizziness",none,Medium
+56,Male,131,180,103.0,"cough, dizziness",diabetes,Medium
+6,Female,57,127,98.9,"cough, fever","heart disease, asthma",Low
+88,Male,71,112,96.6,"breathlessness, nausea","hypertension, diabetes",Low
+60,Female,108,122,101.3,"headache, dizziness","hypertension, diabetes",Low
+57,Female,125,128,101.1,"headache, breathlessness",hypertension,Medium
+50,Female,63,120,99.1,"headache, dizziness",diabetes,Low
+85,Female,85,91,100.5,"chest pain, headache, dizziness",asthma,Medium
+30,Female,78,171,97.5,"cough, dizziness",none,Low
+81,Male,89,146,96.3,"cough, chest pain",asthma,Medium
+54,Male,75,106,102.3,"headache, fatigue",none,Low
+33,Female,87,133,102.4,"fever, nausea",none,Low
+87,Female,121,136,96.7,"chest pain, cough","diabetes, hypertension",Medium
+48,Female,124,138,102.6,"fever, dizziness",none,Medium
+61,Male,129,161,98.6,"breathlessness, dizziness, chest pain","heart disease, asthma",High
+39,Female,64,107,96.4,headache,diabetes,Low
+13,Male,118,107,99.1,"fatigue, headache","hypertension, heart disease",Medium
+84,Male,112,168,99.3,"chest pain, dizziness",hypertension,High
+57,Female,80,136,96.8,"dizziness, headache, nausea",diabetes,Low
+51,Female,74,105,103.6,"fever, dizziness",none,Low
+83,Male,56,132,97.9,breathlessness,none,Low
+71,Male,125,117,102.5,dizziness,none,Medium
+77,Male,85,108,103.9,"headache, fatigue, fever",none,Medium
+85,Male,66,91,98.9,dizziness,none,Low
+23,Female,56,106,101.9,"fever, dizziness, chest pain",heart disease,Medium
+47,Male,107,154,97.8,"chest pain, dizziness, fatigue","asthma, hypertension",Medium
+83,Male,57,151,102.8,"fever, breathlessness","heart disease, diabetes",High
+11,Female,127,108,96.5,"dizziness, breathlessness","asthma, hypertension",Low
+65,Female,62,179,96.9,"breathlessness, nausea, fatigue",none,Medium
+53,Female,108,141,99.3,dizziness,asthma,Low
+86,Female,97,109,101.5,"fever, chest pain",none,Medium
+12,Female,62,137,102.5,"chest pain, headache, fatigue","asthma, heart disease",Medium
+16,Female,95,175,103.5,"chest pain, cough","asthma, hypertension",Medium
+14,Male,69,174,99.9,dizziness,"asthma, diabetes",Low
+36,Male,104,161,103.8,"chest pain, headache, dizziness","asthma, diabetes",Medium
+24,Female,139,129,103.4,"chest pain, fever",none,Medium
+73,Female,58,108,101.9,fever,"hypertension, heart disease",Medium
+54,Female,93,110,99.0,"dizziness, fatigue, headache","diabetes, heart disease",Low
+20,Male,129,96,101.4,"nausea, dizziness",heart disease,Medium
+78,Female,103,124,97.7,"fever, cough, breathlessness",none,Low
+37,Female,117,175,98.5,fatigue,"diabetes, heart disease",Medium
+27,Female,77,107,102.1,"dizziness, chest pain",none,Medium
+64,Female,72,106,99.0,"breathlessness, headache, fatigue","asthma, diabetes",Low
+51,Male,105,92,99.7,dizziness,"heart disease, asthma",Low
+52,Female,87,104,99.2,"cough, fatigue","heart disease, asthma",Low
+47,Male,105,103,97.9,"fatigue, headache, chest pain",asthma,Low
+44,Male,92,111,96.6,"fever, headache, fatigue",none,Low
+45,Female,132,108,97.9,headache,none,Low
+23,Male,133,99,97.4,"nausea, breathlessness, headache","heart disease, asthma",Medium
+73,Female,130,130,97.2,nausea,asthma,Medium
+36,Male,95,154,96.6,"nausea, chest pain",none,Medium
+48,Female,59,172,102.9,fatigue,diabetes,Medium
+58,Male,91,167,99.8,chest pain,diabetes,Medium
+44,Male,114,172,97.4,nausea,hypertension,Medium
+47,Female,86,139,99.3,"chest pain, fatigue","asthma, diabetes",Low
+43,Male,121,176,99.1,"cough, nausea",none,Medium
+75,Male,94,129,103.7,"fatigue, fever, headache","diabetes, hypertension",Medium
+72,Female,132,132,102.5,"fever, dizziness, fatigue",asthma,Medium
+3,Female,89,113,103.6,"nausea, fever",none,Low
+18,Male,59,127,102.8,chest pain,"asthma, heart disease",Medium
+17,Female,69,110,97.4,"cough, dizziness, breathlessness",none,Low
+53,Female,136,120,103.8,"headache, fatigue, dizziness",hypertension,Medium
+69,Male,89,150,103.2,dizziness,"heart disease, hypertension",Medium
+37,Female,114,157,99.3,breathlessness,"hypertension, heart disease",Medium
+7,Female,97,160,103.5,"fever, cough, chest pain",none,Medium
+35,Female,115,108,102.6,breathlessness,asthma,Medium
+4,Female,56,140,100.0,fatigue,none,Low
+48,Male,53,130,103.4,"dizziness, fatigue, fever",none,Low
+5,Female,110,179,102.6,"nausea, breathlessness, headache",none,Medium
+11,Male,82,117,102.7,"fatigue, chest pain, cough",none,Medium
+39,Male,56,120,99.4,"nausea, chest pain, fatigue",diabetes,Low
+81,Male,68,127,99.4,"dizziness, fever, headache",hypertension,Low
+86,Male,117,136,96.5,"chest pain, breathlessness, fatigue",none,Medium
+82,Female,97,122,102.0,"fever, cough",none,Medium
+85,Male,124,132,97.1,"dizziness, fatigue","hypertension, asthma",Medium
+60,Female,130,113,102.5,nausea,none,Medium
+38,Male,55,115,103.1,"headache, nausea",heart disease,Medium
+33,Male,132,114,98.3,dizziness,diabetes,Low
+48,Female,101,146,103.2,"dizziness, fever",heart disease,Medium
+48,Female,60,144,96.6,"cough, headache, nausea",diabetes,Low
+11,Female,134,127,98.5,"fatigue, fever, dizziness",asthma,Low
+58,Male,95,168,104.0,"chest pain, nausea","heart disease, hypertension",High
+66,Male,53,108,102.8,"nausea, chest pain, fever",none,Medium
+31,Female,96,139,103.6,cough,"heart disease, hypertension",Medium
+48,Female,59,163,97.1,"fatigue, cough","asthma, diabetes",Low
+15,Male,73,153,100.1,"fever, cough, fatigue","heart disease, diabetes",Medium
+79,Female,138,152,97.6,fever,hypertension,Medium
+57,Male,137,130,101.3,"fever, headache, fatigue",asthma,Medium
+21,Male,96,155,97.8,cough,none,Low
+64,Male,96,160,100.6,"cough, headache",none,Medium
+9,Female,100,151,100.2,"fever, nausea",diabetes,Low
+58,Female,137,156,98.8,"cough, fatigue, fever",diabetes,Medium
+16,Male,88,111,97.3,"breathlessness, cough, headache",diabetes,Low
+33,Male,131,160,98.2,"headache, nausea, fatigue",none,Medium
+65,Male,125,164,97.2,"dizziness, fatigue, headache",none,Medium
+4,Male,55,172,102.2,"breathlessness, fatigue","heart disease, asthma",Medium
+82,Male,113,170,100.4,"headache, breathlessness, fever","heart disease, hypertension",High
+59,Male,138,97,97.3,"nausea, breathlessness",none,Low
+44,Male,90,130,101.9,"fatigue, fever",diabetes,Low
+41,Male,109,105,98.1,cough,none,Low
+7,Female,99,168,99.3,dizziness,"asthma, diabetes",Low
+21,Female,115,149,100.0,"nausea, chest pain",none,Medium
+51,Female,80,117,100.7,chest pain,heart disease,Medium
+77,Female,86,158,96.1,fatigue,none,Medium
+34,Female,101,136,96.4,breathlessness,asthma,Low
+10,Female,114,147,102.1,"fever, nausea",none,Medium
+51,Female,93,161,103.5,breathlessness,"heart disease, asthma",Medium
+6,Male,54,107,101.7,"nausea, fever","hypertension, heart disease",Medium
+79,Female,70,140,103.9,"headache, nausea, cough","heart disease, asthma",Medium
+73,Female,110,92,98.9,"fever, breathlessness, headache",diabetes,Low
+77,Female,83,173,102.3,"breathlessness, dizziness, chest pain","heart disease, diabetes",High
+68,Female,68,177,97.9,"fever, nausea, chest pain",asthma,Medium
+54,Male,102,178,97.6,"nausea, fatigue, dizziness","diabetes, asthma",Low
+18,Male,121,131,104.0,"fatigue, cough",none,Medium
+59,Female,119,135,101.4,"headache, nausea, breathlessness",none,Medium
+32,Female,121,128,97.8,"headache, dizziness",none,Low
+89,Female,90,151,98.8,"headache, cough, chest pain","heart disease, hypertension",High
+45,Male,87,95,98.3,"fever, cough, breathlessness","asthma, heart disease",Low
+62,Male,75,158,98.2,"headache, fever, chest pain","hypertension, diabetes",Medium
+7,Male,131,119,96.4,"dizziness, nausea",diabetes,Low
+88,Male,50,160,103.8,fatigue,"heart disease, hypertension",High
+84,Male,86,131,98.3,fever,"hypertension, asthma",Low
+5,Male,103,112,103.5,fatigue,hypertension,Low
+38,Male,51,128,100.5,dizziness,heart disease,Low
+83,Female,67,154,99.7,fever,hypertension,Medium
+59,Female,73,91,101.9,"breathlessness, fever","heart disease, hypertension",Medium
+66,Female,61,141,101.4,cough,asthma,Medium
+32,Male,83,139,97.9,"dizziness, cough","diabetes, hypertension",Low
+84,Female,138,120,96.5,nausea,hypertension,Medium
+52,Female,138,105,101.1,"dizziness, headache",none,Medium
+29,Male,111,109,99.6,"dizziness, breathlessness, nausea","heart disease, asthma",Medium
+86,Male,81,177,102.0,nausea,"asthma, diabetes",Medium
+73,Male,57,160,103.2,cough,none,Medium
+42,Female,64,177,97.6,"nausea, chest pain, headache",diabetes,Medium
+59,Male,115,143,99.7,nausea,"asthma, heart disease",Medium
+3,Female,82,90,102.0,"fever, chest pain, breathlessness",diabetes,Medium
+70,Male,58,150,96.3,"cough, fatigue",none,Low
+83,Female,97,138,99.6,"fatigue, chest pain","hypertension, asthma",Medium
+45,Male,72,158,99.1,breathlessness,none,Low
+3,Female,109,176,101.8,"fatigue, nausea",none,Medium
+32,Female,94,109,98.2,"fever, chest pain, dizziness",diabetes,Low
+31,Male,58,102,100.8,"chest pain, fever","diabetes, hypertension",Low
+57,Male,119,117,102.0,cough,"asthma, diabetes",Medium
+74,Female,123,166,102.2,"breathlessness, cough",none,High
+85,Male,102,128,98.2,"cough, dizziness, fatigue",heart disease,Medium
+7,Female,132,175,99.0,"dizziness, nausea, breathlessness",hypertension,Medium
+39,Female,73,158,99.8,headache,"hypertension, heart disease",Medium
+8,Female,103,161,100.2,"breathlessness, cough",none,Low
+43,Male,107,137,96.7,"breathlessness, chest pain, cough",diabetes,Low
+10,Male,125,175,100.5,"breathlessness, fatigue",asthma,Medium
+2,Male,74,105,102.0,"breathlessness, dizziness","hypertension, heart disease",Medium
+31,Female,86,138,99.7,"dizziness, cough, fatigue",heart disease,Low
+60,Male,110,130,103.3,"dizziness, breathlessness",none,Low
+73,Male,68,92,98.1,"fatigue, cough, fever",none,Low
+43,Male,98,162,102.7,"dizziness, cough",heart disease,Medium
+59,Male,95,111,97.1,"nausea, fever, headache","diabetes, asthma",Low
+5,Male,135,96,102.1,"cough, fatigue","hypertension, diabetes",Medium
+20,Male,77,154,99.6,nausea,"heart disease, diabetes",Medium
+1,Female,51,92,100.2,"headache, chest pain","heart disease, diabetes",Medium
+14,Male,117,109,97.9,"headache, fatigue, cough",heart disease,Medium
+11,Female,101,148,100.5,"breathlessness, cough, dizziness",none,Low
+84,Male,61,141,99.0,"nausea, chest pain, dizziness",none,Medium
+90,Male,60,153,102.8,"dizziness, headache, chest pain","diabetes, heart disease",High
+28,Female,84,95,103.4,"headache, nausea, fatigue","diabetes, heart disease",Medium
+41,Male,76,165,97.2,"fatigue, chest pain, cough",none,Medium
+73,Male,122,139,101.4,"dizziness, breathlessness, nausea",none,Medium
+89,Male,114,134,96.4,"breathlessness, fatigue",none,Medium
+44,Female,91,93,101.1,"nausea, fever",heart disease,Medium
+56,Male,137,164,101.3,headache,none,Medium
+10,Male,84,109,99.0,"cough, dizziness, breathlessness",asthma,Low
+14,Male,50,129,99.6,"fever, nausea",none,Low
+24,Female,107,161,100.4,"fever, chest pain",none,Medium
+46,Male,126,166,102.3,"chest pain, cough",heart disease,High
+11,Male,123,156,97.4,"cough, fever",asthma,Medium
+35,Female,68,98,97.3,"fatigue, cough",diabetes,Low
+47,Female,81,170,100.0,"breathlessness, nausea, chest pain",none,Medium
+39,Male,100,132,102.7,"dizziness, breathlessness",heart disease,Medium
+84,Male,88,131,100.8,"breathlessness, nausea, cough",none,Low
+51,Female,87,178,101.1,"breathlessness, cough, nausea",heart disease,Medium
+47,Male,122,115,100.7,"cough, dizziness, headache",none,Low
+60,Male,106,127,102.7,fatigue,"heart disease, diabetes",Medium
+82,Female,80,122,101.3,"fatigue, nausea, breathlessness",none,Medium
+58,Female,124,141,100.3,"fatigue, headache, chest pain",diabetes,Medium
+14,Male,134,175,98.8,"chest pain, headache, dizziness","heart disease, hypertension",High
+56,Male,51,102,98.1,"breathlessness, nausea, cough",heart disease,Low
+87,Male,94,93,99.9,"fatigue, chest pain",none,Medium
+19,Female,89,133,99.6,nausea,heart disease,Low
+13,Female,139,147,98.6,"chest pain, fatigue","diabetes, heart disease",Medium
+44,Male,136,111,103.4,"breathlessness, headache, fever","hypertension, heart disease",Medium
+72,Female,109,119,102.4,"cough, fever, dizziness","heart disease, hypertension",Medium
+4,Male,107,165,99.4,breathlessness,none,Low
+36,Male,123,103,102.4,"cough, nausea, fatigue",none,Medium
+59,Male,83,175,102.9,"dizziness, headache, breathlessness","heart disease, asthma",Medium
+15,Female,95,148,100.9,"headache, nausea, fatigue",none,Low
+87,Male,90,105,97.9,cough,hypertension,Low
+66,Female,103,166,97.1,"fatigue, fever",hypertension,Medium
+72,Male,112,126,97.1,"nausea, headache",none,Medium
+46,Male,112,107,97.6,"nausea, breathlessness","heart disease, hypertension",Medium
+57,Female,71,100,100.5,headache,none,Low
+36,Male,118,126,97.3,"nausea, headache","diabetes, asthma",Low
+15,Female,119,136,100.3,nausea,"hypertension, heart disease",Medium
+14,Male,88,94,99.6,"fever, breathlessness",none,Low
+31,Male,125,178,98.8,"fatigue, fever, headache",none,Medium
+27,Male,57,162,98.8,"cough, nausea","asthma, hypertension",Low
+74,Female,115,176,102.5,fatigue,none,High
+36,Male,139,106,98.0,"dizziness, fatigue, fever","heart disease, hypertension",Medium
+19,Female,130,143,99.0,fever,asthma,Low
+89,Female,108,152,98.6,fever,"heart disease, asthma",Medium
+86,Female,58,158,99.2,"breathlessness, nausea",asthma,Medium
+37,Female,120,163,97.0,"dizziness, nausea",none,Medium
+6,Male,130,148,96.1,nausea,diabetes,Low
+55,Male,138,106,103.1,"cough, fatigue",diabetes,Medium
+84,Female,82,100,99.0,"cough, chest pain, breathlessness","asthma, heart disease",Medium
+90,Male,104,173,96.7,chest pain,none,Medium
+62,Male,66,165,97.8,"nausea, chest pain, fatigue","asthma, diabetes",Medium
+55,Male,111,99,97.8,fever,none,Low
+41,Female,88,107,99.1,cough,none,Low
+68,Male,128,173,97.3,"breathlessness, dizziness","hypertension, heart disease",High
+79,Female,77,101,103.2,fever,"heart disease, hypertension",Medium
+55,Female,67,121,98.2,breathlessness,"asthma, heart disease",Low
+4,Female,76,156,100.9,fatigue,diabetes,Low
+31,Female,99,104,97.9,"fever, headache, chest pain",asthma,Low
+17,Female,122,143,98.9,"cough, fatigue, breathlessness",none,Low
+3,Male,51,123,97.7,fatigue,"asthma, heart disease",Low
+65,Female,104,179,99.2,"cough, nausea, chest pain",diabetes,Medium
+66,Male,69,158,98.6,"fever, cough, dizziness",hypertension,Medium
+8,Male,61,145,96.9,"chest pain, cough, dizziness","hypertension, diabetes",Low
+2,Male,139,91,97.3,"headache, fever",hypertension,Low
+35,Male,53,132,102.5,"fever, cough","diabetes, hypertension",Low
+59,Female,57,153,102.9,dizziness,none,Medium
+33,Male,123,176,101.8,chest pain,none,High
+2,Male,55,150,98.9,cough,none,Low
+71,Female,78,131,98.0,"dizziness, cough, chest pain","asthma, diabetes",Medium
+65,Male,72,118,102.4,fatigue,none,Medium
+60,Female,89,131,96.7,"chest pain, cough",none,Low
+38,Female,129,121,99.7,"nausea, fatigue, fever","hypertension, diabetes",Low
+1,Female,53,119,100.3,"chest pain, cough, nausea","heart disease, asthma",Medium
+40,Male,76,157,103.9,"nausea, chest pain",none,Medium
+36,Male,55,119,103.2,"fatigue, dizziness, cough",diabetes,Low
+75,Male,114,107,101.1,"fever, headache","diabetes, hypertension",Medium
+85,Male,80,127,98.1,"fatigue, dizziness","asthma, hypertension",Low
+58,Female,79,99,103.5,fever,none,Low
+14,Male,107,149,98.5,dizziness,none,Low
+58,Female,109,123,102.8,cough,"asthma, heart disease",Medium
+90,Male,77,131,97.2,"breathlessness, cough, nausea","diabetes, asthma",Low
+39,Female,72,93,103.6,"breathlessness, chest pain",diabetes,Medium
+18,Male,51,97,102.6,cough,none,Low
+52,Female,137,170,103.5,headache,none,Medium
+3,Male,75,172,99.5,fever,diabetes,Low
+6,Female,56,111,103.4,"fatigue, breathlessness",none,Low
+49,Female,72,135,97.7,headache,heart disease,Low
+20,Male,128,169,100.9,"headache, breathlessness, fatigue","heart disease, diabetes",Medium
+12,Female,99,107,99.4,"breathlessness, dizziness, headache",none,Low
+49,Female,111,159,102.3,"dizziness, breathlessness",hypertension,Medium
+4,Female,126,118,96.2,"chest pain, fatigue",asthma,Medium
+75,Male,70,102,98.0,headache,"diabetes, heart disease",Medium
+74,Female,95,112,97.4,"dizziness, fatigue, nausea","asthma, heart disease",Medium
+4,Female,122,162,97.1,nausea,"asthma, diabetes",Medium
+63,Male,61,97,97.9,chest pain,"heart disease, diabetes",Medium
+43,Male,66,133,101.7,"chest pain, nausea",none,Medium
+76,Male,64,157,102.9,dizziness,"heart disease, asthma",High
+13,Female,88,131,97.1,fatigue,"heart disease, asthma",Low
+41,Male,140,161,101.5,"dizziness, fever, nausea","hypertension, heart disease",High
+40,Female,66,112,101.8,"fatigue, nausea, headache",none,Low
+24,Female,128,118,101.1,nausea,none,Medium
+43,Male,80,134,103.9,fever,"asthma, hypertension",Low
+2,Female,76,121,101.5,"headache, fatigue",none,Low
+1,Male,99,146,101.9,fatigue,heart disease,Medium
+45,Female,62,151,102.3,"breathlessness, fever, nausea",none,Medium
+5,Female,52,130,98.1,fever,hypertension,Low
+49,Male,59,160,103.5,dizziness,"heart disease, asthma",Medium
+4,Female,133,111,100.9,"cough, chest pain",none,Medium
+43,Male,74,142,101.6,"headache, dizziness, cough",hypertension,Low
+13,Male,100,163,100.4,"cough, chest pain",diabetes,Medium
+55,Male,87,174,101.0,"breathlessness, chest pain",none,Medium
+27,Male,131,127,103.8,"fever, cough",heart disease,Medium
+63,Female,61,172,100.4,dizziness,asthma,Medium
+24,Female,55,123,99.5,"breathlessness, fatigue",diabetes,Low
+20,Male,60,175,98.8,"fatigue, nausea, headache",none,Low
+71,Male,99,156,99.3,"nausea, headache, fever",asthma,Medium
+11,Female,54,154,100.6,"cough, chest pain, breathlessness",none,Medium
+22,Male,74,106,96.3,fatigue,none,Low
+81,Male,126,123,98.6,"fever, chest pain, breathlessness","heart disease, asthma",High
+42,Female,116,148,103.3,fatigue,none,Medium
+54,Male,68,162,100.7,fever,"diabetes, hypertension",Low
+69,Female,102,123,99.1,"nausea, chest pain",none,Medium
+36,Female,68,169,100.9,"fatigue, chest pain, breathlessness",hypertension,Medium
+7,Female,84,137,96.2,"headache, cough",diabetes,Low
+30,Male,88,146,102.2,"headache, dizziness",diabetes,Low
+25,Female,77,142,101.9,"dizziness, fatigue, chest pain","hypertension, diabetes",Medium
+40,Female,67,157,103.0,cough,none,Medium
+26,Male,81,94,99.7,"breathlessness, cough",heart disease,Low
+65,Female,131,105,101.4,dizziness,heart disease,High
+23,Female,125,160,98.8,headache,"diabetes, hypertension",Medium
+4,Female,56,110,102.8,breathlessness,"hypertension, asthma",Low
+27,Female,133,142,100.1,"chest pain, breathlessness, fever","hypertension, asthma",Medium
+2,Male,82,167,102.4,"headache, breathlessness",asthma,Medium
+59,Female,77,149,98.4,"fatigue, headache, chest pain",none,Low
+66,Female,121,172,100.8,"headache, dizziness",none,Medium
+62,Male,93,125,101.1,"headache, dizziness","asthma, diabetes",Medium
+20,Male,57,166,99.2,"cough, dizziness",none,Low
+84,Female,87,123,103.3,"fatigue, dizziness",none,Medium
+75,Male,93,118,101.5,"nausea, dizziness, cough","asthma, diabetes",Medium
+85,Male,87,102,99.8,"headache, dizziness, nausea",none,Low
+88,Female,133,101,97.8,headache,asthma,Medium
+48,Female,124,127,99.7,nausea,none,Low
+82,Male,110,114,100.0,"fatigue, headache, cough",diabetes,Low
+20,Male,75,133,99.3,"nausea, fever, cough","hypertension, diabetes",Low
+63,Female,130,112,98.5,chest pain,asthma,Medium
+27,Male,123,110,99.9,cough,"heart disease, asthma",Medium
+55,Female,104,151,99.1,breathlessness,"asthma, diabetes",Low
+42,Male,52,176,96.0,"breathlessness, fever, dizziness",asthma,Low
+17,Male,99,154,100.7,fever,none,Low
+39,Female,108,156,100.8,"fatigue, dizziness",none,Low
+44,Female,95,114,97.3,"chest pain, fever",none,Low
+17,Male,52,165,100.0,dizziness,"diabetes, hypertension",Low
+82,Female,118,169,96.4,fever,"diabetes, heart disease",High
+89,Male,103,146,99.0,"headache, breathlessness, dizziness",none,Low
+27,Male,88,143,101.3,"headache, nausea, fatigue","hypertension, heart disease",Medium
+14,Male,86,104,102.3,"breathlessness, headache",none,Low
+34,Male,95,180,99.3,chest pain,"heart disease, diabetes",Medium
+89,Female,92,120,96.0,"fever, chest pain, headache","heart disease, diabetes",Medium
+12,Male,62,122,101.2,"headache, cough",diabetes,Low
+13,Male,55,127,98.9,"dizziness, breathlessness, nausea",none,Low
+13,Male,51,107,101.3,dizziness,heart disease,Medium
+80,Female,61,137,102.5,fever,heart disease,Medium
+59,Female,99,178,102.8,"cough, chest pain",none,Medium
+90,Male,70,103,99.3,"nausea, fatigue, headache","heart disease, diabetes",Medium
+79,Female,95,168,96.2,"cough, breathlessness, fatigue",none,Medium
+53,Female,55,98,98.1,"chest pain, dizziness","hypertension, asthma",Low
+44,Male,105,174,101.8,"dizziness, nausea","heart disease, diabetes",Medium
+72,Male,51,172,103.5,"nausea, fatigue, breathlessness",none,Medium
+10,Female,91,120,98.6,"chest pain, headache",none,Low
+71,Female,101,120,96.6,"nausea, chest pain",heart disease,Medium
+41,Male,113,173,96.1,"fatigue, chest pain","diabetes, heart disease",High
+78,Female,115,161,97.7,"nausea, cough, fatigue",none,Medium
+29,Female,92,161,102.1,"nausea, dizziness, fatigue",heart disease,Medium
+15,Male,134,118,96.0,"headache, nausea","asthma, heart disease",Medium
+14,Male,71,153,97.1,"fatigue, chest pain, cough","hypertension, diabetes",Medium
+16,Female,77,148,102.6,dizziness,none,Low
+54,Male,131,176,100.7,"nausea, dizziness","hypertension, heart disease",Medium
+1,Male,120,145,102.7,"cough, dizziness","hypertension, asthma",Medium
+17,Male,99,174,100.8,"fatigue, breathlessness","hypertension, heart disease",Medium
+51,Female,87,147,102.4,fatigue,"asthma, heart disease",Medium
+71,Female,120,170,97.7,headache,"asthma, heart disease",High
+17,Male,114,159,101.6,"fever, fatigue",heart disease,High
+75,Female,136,158,98.3,"chest pain, headache",none,High
+4,Female,68,96,101.4,headache,none,Low
+37,Female,68,97,101.5,"breathlessness, fatigue","diabetes, hypertension",Low
+58,Male,128,176,101.9,fatigue,none,Medium
+66,Female,138,175,96.4,"fatigue, breathlessness","asthma, heart disease",High
+7,Male,82,115,101.0,"breathlessness, dizziness","asthma, heart disease",Low
+70,Male,74,127,99.6,"fever, nausea, fatigue","diabetes, hypertension",Low
+6,Female,85,161,98.1,headache,none,Low
+43,Female,140,109,96.3,"chest pain, fatigue","asthma, hypertension",Medium
+74,Female,59,180,98.5,cough,"diabetes, asthma",Medium
+21,Female,119,158,99.2,"breathlessness, fever","asthma, hypertension",Medium
+47,Female,77,169,100.2,"chest pain, nausea, dizziness",heart disease,Medium
+31,Male,55,177,103.1,"fever, breathlessness",asthma,Medium
+4,Female,115,155,99.6,headache,"hypertension, heart disease",Medium
+66,Male,62,111,103.8,"chest pain, dizziness, nausea",none,Medium
+86,Male,137,144,102.7,fatigue,"diabetes, asthma",Medium
+88,Male,53,148,101.7,fever,none,Medium
+7,Male,82,161,96.6,headache,heart disease,Medium
+58,Female,105,130,96.1,"fever, headache, chest pain","diabetes, asthma",Low
+75,Male,139,99,98.9,"fever, cough, dizziness",diabetes,Medium
+37,Female,98,140,102.6,nausea,none,Low
+69,Male,67,140,102.4,"headache, dizziness, fever",asthma,Medium
+2,Male,65,95,96.0,"fatigue, headache, nausea",none,Low
+40,Male,94,117,99.3,"cough, fever, fatigue",none,Low
+79,Female,74,104,97.5,"chest pain, fatigue, headache",diabetes,Medium
+38,Male,82,102,97.6,"nausea, cough, fatigue",none,Low
+86,Male,62,126,101.0,dizziness,heart disease,Medium
+43,Female,138,164,97.2,"dizziness, fatigue, cough",hypertension,Medium
+1,Female,81,118,101.7,"fatigue, cough, nausea",none,Low
+87,Female,111,149,99.6,"nausea, headache",none,Medium
+23,Male,85,107,103.1,headache,"diabetes, asthma",Low
+10,Male,114,170,96.2,"fatigue, nausea, headache",none,Medium
+5,Female,119,159,99.8,dizziness,hypertension,Medium
+76,Female,67,149,100.0,fatigue,diabetes,Low
+85,Male,128,177,97.3,"cough, breathlessness, fever",none,Medium
+73,Male,111,135,96.3,"breathlessness, chest pain",asthma,Medium
+30,Male,135,116,100.1,"fatigue, breathlessness",diabetes,Low
+6,Female,63,180,103.7,"headache, fatigue, dizziness",hypertension,Medium
+49,Female,96,165,101.2,headache,hypertension,Medium
+67,Female,95,134,99.9,"chest pain, headache",none,Medium
+57,Male,79,99,100.1,"breathlessness, fever",none,Low
+21,Female,127,105,101.3,"dizziness, nausea",none,Medium
+62,Female,111,116,100.7,"fatigue, chest pain, fever",none,Medium
+17,Male,67,170,100.1,"cough, chest pain, fever",hypertension,Medium
+67,Female,126,162,101.1,"headache, chest pain, fever",heart disease,High
+62,Male,78,142,100.8,"cough, headache, dizziness","asthma, diabetes",Low
+88,Female,108,166,100.7,fatigue,hypertension,Medium
+14,Male,75,156,102.9,"fatigue, nausea, fever","diabetes, heart disease",Medium
