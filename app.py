@@ -1,6 +1,6 @@
 import streamlit as st
-from src.predict import predict_patient
-from src.ehr_utils import extract_text_from_file, parse_basic_ehr_fields
+from predict import predict_patient
+from ehr_utils import extract_text_from_file, parse_basic_ehr_fields
 
 st.set_page_config(
     page_title="Smart Care",
