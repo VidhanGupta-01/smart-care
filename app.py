@@ -65,7 +65,7 @@ TEXT = {
 col_logo, col_title = st.columns([1, 6])
 
 with col_logo:
-    st.image("assets\Gemini_Generated_Image_w4t6h5w4t6h5w4t6-removebg-preview.png", width=300)
+    st.image("smart_care_logo.png", width=300)
 
 with col_title:
     st.markdown(
