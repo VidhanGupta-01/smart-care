@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-model = joblib.load("data/risk_classifier.pkl")
+model = joblib.load("risk_classifier.pkl")
 
 CONFIDENCE_THRESHOLD = 0.65
 
