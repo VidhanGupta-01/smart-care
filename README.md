@@ -29,6 +29,7 @@ Smart Care provides **decision-support** for patient triage by:
 - Optional visual flagging for skin-related concerns
 - Explainable, interpretable risk stratification
 - Interactive **Data Analytics Dashboard** (EDA, model evaluation, benchmarking)
+- **SQL** (SQLite), **Excel** exports, and **Power BI** integration guide
 - Multilingual interface (English, Hindi, Tamil)
 - Safety-first scope boundaries
 
@@ -69,6 +70,14 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
+
+### 3. Generate SQL / Excel / Power BI files
+```bash
+python database/setup_db.py
+```
+
+Import `exports/smart_care_analytics.xlsx` into Power BI Desktop.  
+See `powerbi/POWERBI_SETUP.md` for the full dashboard guide.
 
 ---
 

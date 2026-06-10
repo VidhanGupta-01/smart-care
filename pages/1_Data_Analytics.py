@@ -5,6 +5,9 @@ import plotly.express as px
 import streamlit as st
 
 COMPARISON_CSV = Path("model_comparison_results.csv")
+EXPORTS_DIR = Path("exports")
+EXCEL_EXPORT = EXPORTS_DIR / "smart_care_analytics.xlsx"
+SQLITE_DB = Path("database") / "smart_care.db"
 
 from analytics import (
     compare_all_models,
@@ -39,8 +42,14 @@ col5.metric("Dominant Risk", overview["dominant_risk"])
 
 st.divider()
 
-tab_eda, tab_clinical, tab_model, tab_compare = st.tabs(
-    ["Dataset EDA", "Clinical Patterns", "Model Performance", "Model Comparison"]
+tab_eda, tab_clinical, tab_model, tab_compare, tab_bi = st.tabs(
+    [
+        "Dataset EDA",
+        "Clinical Patterns",
+        "Model Performance",
+        "Model Comparison",
+        "SQL, Excel & Power BI",
+    ]
 )
 
 with tab_eda:
@@ -207,6 +216,72 @@ with tab_compare:
     fig.update_layout(yaxis={"categoryorder": "total ascending"})
     st.plotly_chart(fig, use_container_width=True)
     st.dataframe(comparison, use_container_width=True)
+
+with tab_bi:
+    st.subheader("Analyst Toolkit — SQL, Excel, Power BI")
+    st.write(
+        "This project supports a full data analyst workflow: structured SQL storage, "
+        "Excel reporting, and Power BI dashboarding from the same dataset."
+    )
+
+    if st.button("Generate / refresh SQL + Excel + CSV exports"):
+        from database.setup_db import export_bi_files, setup_database
+
+        setup_database()
+        export_bi_files()
+        st.success("Exports created in `database/smart_care.db` and `exports/`.")
+
+    col_a, col_b = st.columns(2)
+
+    with col_a:
+        st.markdown("**Excel workbook (multi-sheet)**")
+        if EXCEL_EXPORT.exists():
+            st.download_button(
+                label="Download smart_care_analytics.xlsx",
+                data=EXCEL_EXPORT.read_bytes(),
+                file_name="smart_care_analytics.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            )
+        else:
+            st.caption("Click 'Generate / refresh' above to create the Excel file.")
+
+    with col_b:
+        st.markdown("**SQLite database**")
+        if SQLITE_DB.exists():
+            st.download_button(
+                label="Download smart_care.db",
+                data=SQLITE_DB.read_bytes(),
+                file_name="smart_care.db",
+                mime="application/octet-stream",
+            )
+        else:
+            st.caption("Click 'Generate / refresh' above to create the database.")
+
+    st.markdown("**Power BI setup**")
+    st.markdown(
+        "1. Open Power BI Desktop → **Get Data → Excel**\n"
+        "2. Import `exports/smart_care_analytics.xlsx`\n"
+        "3. Build visuals using sheets: Patients, Risk_Distribution, Vitals_by_Risk, Model_Comparison\n\n"
+        "Full step-by-step guide: `powerbi/POWERBI_SETUP.md` in the GitHub repo."
+    )
+
+    if EXPORTS_DIR.exists():
+        csv_files = sorted(EXPORTS_DIR.glob("*.csv"))
+        if csv_files:
+            st.markdown("**CSV files ready for Power BI / Tableau**")
+            for csv_file in csv_files:
+                st.download_button(
+                    label=f"Download {csv_file.name}",
+                    data=csv_file.read_bytes(),
+                    file_name=csv_file.name,
+                    mime="text/csv",
+                    key=f"dl_{csv_file.name}",
+                )
+
+    st.markdown("**Sample SQL queries**")
+    sql_path = Path("database") / "analyst_queries.sql"
+    if sql_path.exists():
+        st.code(sql_path.read_text(encoding="utf-8"), language="sql")
 
 st.divider()
 st.subheader("Key Data Insights")

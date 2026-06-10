@@ -5,6 +5,7 @@ scikit-learn
 xgboost
 lightgbm
 plotly
+openpyxl
 opencv-python-headless
 pillow
 pdfplumber
