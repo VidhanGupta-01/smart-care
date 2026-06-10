@@ -66,6 +66,13 @@ def main():
     parser.add_argument(
         "--list", action="store_true", help="List available model names and exit"
     )
+    parser.add_argument(
+        "--export",
+        default="model_comparison_results.csv",
+        nargs="?",
+        const="model_comparison_results.csv",
+        help="Export comparison table to CSV",
+    )
     args = parser.parse_args()
 
     if args.list:
@@ -73,7 +80,21 @@ def main():
             print(name)
         return
 
-    compare_models(verbose=args.verbose)
+    results, best = compare_models(verbose=args.verbose)
+
+    if args.export:
+        export_rows = [
+            {
+                "model": row["model"],
+                "cv_accuracy": round(row["cv_mean"], 4),
+                "cv_std": round(row["cv_std"], 4),
+                "test_accuracy": round(row["test_accuracy"], 4),
+            }
+            for row in results
+        ]
+        export_df = pd.DataFrame(export_rows)
+        export_df.to_csv(args.export, index=False)
+        print(f"\nResults exported to {args.export}")
 
 
 if __name__ == "__main__":
