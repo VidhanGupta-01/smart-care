@@ -4,6 +4,8 @@ Smart Care is a patient triage and care prioritization system designed to suppor
 
 This project was developed as part of the **Kanini Hackathon (Chennai)**.
 
+**Live Demo:** [smart-care-triage.streamlit.app](https://smart-care-triage.streamlit.app/)
+
 ![Smart Care – Application Home](smart_care_home.png)
 ---
 
@@ -26,6 +28,7 @@ Smart Care provides **decision-support** for patient triage by:
 - Optional EHR / medical report ingestion (PDF / TXT)
 - Optional visual flagging for skin-related concerns
 - Explainable, interpretable risk stratification
+- Interactive **Data Analytics Dashboard** (EDA, model evaluation, benchmarking)
 - Multilingual interface (English, Hindi, Tamil)
 - Safety-first scope boundaries
 
@@ -45,9 +48,10 @@ Smart Care provides **decision-support** for patient triage by:
 ## 🧰 Technology Stack
 
 - **Frontend:** Streamlit (Python)
-- **Risk Stratification Model:** Decision Tree (scikit-learn)
-- **Data:** Synthetic patient dataset
-- **Supporting Libraries:** Pandas, NumPy, OpenCV
+- **Risk Stratification Model:** AdaBoost (scikit-learn), benchmarked against 12+ models
+- **Analytics:** Plotly dashboards, confusion matrix, feature importance
+- **Data:** Synthetic patient dataset (500 records)
+- **Supporting Libraries:** Pandas, NumPy, scikit-learn, XGBoost, LightGBM, Plotly, OpenCV
 - **Language:** Python 3
 
 Technology choices prioritize **explainability, safety, and rapid deployment**.

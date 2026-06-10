@@ -1,6 +1,10 @@
+from pathlib import Path
+
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+
+COMPARISON_CSV = Path("model_comparison_results.csv")
 
 from analytics import (
     compare_all_models,
@@ -180,11 +184,15 @@ with tab_compare:
     st.subheader("Model Benchmarking")
     st.caption("Cross-validated accuracy across all tested classifiers")
 
-    @st.cache_data(show_spinner="Running model comparison (first load may take ~2 min)...")
-    def cached_comparison():
-        return compare_all_models(df)
+    if COMPARISON_CSV.exists():
+        comparison = pd.read_csv(COMPARISON_CSV)
+        st.caption("Loaded pre-computed benchmark results for faster loading.")
+    else:
+        @st.cache_data(show_spinner="Running model comparison (first load may take ~2 min)...")
+        def cached_comparison():
+            return compare_all_models(df)
 
-    comparison = cached_comparison()
+        comparison = cached_comparison()
     fig = px.bar(
         comparison,
         x="cv_accuracy",
