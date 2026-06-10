@@ -68,7 +68,7 @@ def generate_patient():
 data = [generate_patient() for _ in range(NUM_SAMPLES)]
 df = pd.DataFrame(data)
 
-df.to_csv("data/synthetic_patients.csv", index=False)
+df.to_csv("synthetic_patients.csv", index=False)
 
 print("Synthetic dataset generated ✅")
 print(df.head())

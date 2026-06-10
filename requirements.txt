@@ -2,6 +2,8 @@ streamlit
 pandas
 numpy
 scikit-learn
+xgboost
+lightgbm
 opencv-python-headless
 pillow
 pdfplumber

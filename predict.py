@@ -4,7 +4,9 @@ import cv2
 import numpy as np
 from PIL import Image
 
-model = joblib.load("risk_classifier.pkl")
+from features import MODEL_PATH, prepare_features
+
+model = joblib.load(MODEL_PATH)
 
 CONFIDENCE_THRESHOLD = 0.65
 
@@ -80,25 +82,7 @@ def confidence_level(confidence):
         return "Low"
     
 def predict_patient(patient, uploaded_image=None):
-    df = pd.DataFrame([patient])
-
-    df["Gender"] = df["Gender"].map({"Male": 0, "Female": 1})
-    df["Has_Chest_Pain"] = df["Symptoms"].str.contains("chest pain").astype(int)
-    df["Has_Fever"] = df["Symptoms"].str.contains("fever").astype(int)
-    df["Has_Heart_Disease"] = df["Pre_Existing_Conditions"].str.contains("heart disease").astype(int)
-
-    features = df[
-        [
-            "Age",
-            "Gender",
-            "Heart_Rate",
-            "Systolic_BP",
-            "Temperature",
-            "Has_Chest_Pain",
-            "Has_Fever",
-            "Has_Heart_Disease",
-        ]
-    ]
+    features = prepare_features(pd.DataFrame([patient]))
 
     risk = model.predict(features)[0]
     confidence = max(model.predict_proba(features)[0])

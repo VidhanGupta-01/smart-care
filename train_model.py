@@ -1,62 +1,68 @@
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import classification_report, accuracy_score
+import argparse
+
 import joblib
-from sklearn.model_selection import cross_val_score
+import pandas as pd
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.model_selection import cross_val_score, train_test_split
 
-df = pd.read_csv("data/synthetic_patients.csv")
-
-df["Gender"] = df["Gender"].map({"Male": 0, "Female": 1})
-
-df["Has_Chest_Pain"] = df["Symptoms"].str.contains("chest pain").astype(int)
-df["Has_Fever"] = df["Symptoms"].str.contains("fever").astype(int)
-df["Has_Heart_Disease"] = df["Pre_Existing_Conditions"].str.contains("heart disease").astype(int)
-
-X = df[
-    [
-        "Age",
-        "Gender",
-        "Heart_Rate",
-        "Systolic_BP",
-        "Temperature",
-        "Has_Chest_Pain",
-        "Has_Fever",
-        "Has_Heart_Disease",
-    ]
-]
-
-y = df["Risk_Level"]
+from features import DATASET_PATH, MODEL_PATH, prepare_features
+from models_registry import RANDOM_STATE, get_models
 
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
+def train(model_name="decision_tree"):
+    models = get_models()
+    if model_name not in models:
+        available = ", ".join(sorted(models))
+        raise ValueError(f"Unknown model '{model_name}'. Choose from: {available}")
 
-model = DecisionTreeClassifier(
-    max_depth=5,
-    random_state=42
-)
+    df = pd.read_csv(DATASET_PATH)
+    X = prepare_features(df)
+    y = df["Risk_Level"]
 
-cv_scores = cross_val_score(
-    model,
-    X,
-    y,
-    cv=5,          
-    scoring="accuracy"
-)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=RANDOM_STATE
+    )
 
-print("Cross-validation scores:", cv_scores)
-print("Mean CV accuracy:", cv_scores.mean())
+    model = models[model_name]
 
-model.fit(X_train, y_train)
+    cv_scores = cross_val_score(model, X_train, y_train, cv=5, scoring="accuracy")
+    print(f"Training model: {model_name}")
+    print("Cross-validation scores:", cv_scores)
+    print("Mean CV accuracy:", cv_scores.mean())
 
-y_pred = model.predict(X_test)
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
 
-print("Model Accuracy:", accuracy_score(y_test, y_pred))
-print("\nClassification Report:\n")
-print(classification_report(y_test, y_pred))
+    print("Test accuracy:", accuracy_score(y_test, y_pred))
+    print("\nClassification Report:\n")
+    print(classification_report(y_test, y_pred))
 
-joblib.dump(model, "data/risk_classifier.pkl")
-print("\nModel saved as data/risk_classifier.pkl ✅")
+    joblib.dump(model, MODEL_PATH)
+    print(f"\nModel saved as {MODEL_PATH}")
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Train a risk classifier and save it for the Smart Care app."
+    )
+    parser.add_argument(
+        "--model",
+        default="decision_tree",
+        choices=sorted(get_models()),
+        help="Classifier to train (default: decision_tree)",
+    )
+    parser.add_argument(
+        "--list", action="store_true", help="List available models and exit"
+    )
+    args = parser.parse_args()
+
+    if args.list:
+        for name in sorted(get_models()):
+            print(name)
+        return
+
+    train(args.model)
+
+
+if __name__ == "__main__":
+    main()
