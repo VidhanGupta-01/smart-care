@@ -1,5 +1,8 @@
 # Smart Care — PatientTriage.ai
 
+<img width="494" height="895" alt="smart_care_home (2)" src="https://github.com/user-attachments/assets/9ef37f6e-a9c0-4ccc-9447-0dbc005e54f0" />
+
+
 **AI-powered, queue-aware patient triage system** — built for frontline ER intake decision support, combining a trained ML risk model with an age-stratified safety layer and live multi-patient queue management.
 
 Built for the **Accenture Innovation Challenge 2026** (Round 2 — PatientTriage.ai track). Originally developed as a single-patient triage tool for the Kanini Hackathon (Chennai); extended here into a full queue-aware system.
