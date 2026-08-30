@@ -1,0 +1,19 @@
+Patient_ID,Age,Gender,Heart_Rate,Systolic_BP,Temperature,Resp_Rate,Symptoms,Pre_Existing_Conditions,History_Available,Case_Tag
+P01,29,Female,78,118,98.6,14,headache,none,True,baseline_low
+P02,41,Male,82,124,99.1,16,"cough, fatigue",none,True,baseline_low
+P03,3,Female,132,95,100.8,32,"fever, fussiness",none,False,pediatric_age_sensitive
+P04,55,Male,118,158,99.9,20,"chest pain, breathlessness","heart disease, hypertension",True,high_risk_cardiac
+P05,34,Male,95,130,98.9,15,minor laceration,none,True,baseline_low
+P06,67,Female,88,142,98.4,18,joint pain,diabetes,True,baseline_medium
+P07,26,Female,98,112,99.4,18,"fatigue, dizziness, nausea",none,False,ambiguous_presentation
+P08,45,Male,140,88,103.2,26,"fever, breathlessness, confusion",diabetes,True,high_risk_sepsis
+P09,8,Male,110,98,99.0,22,"cough, mild fever",asthma,True,pediatric_baseline
+P10,52,Female,90,136,98.7,16,"headache, blurred vision",hypertension,True,baseline_medium
+P11,78,Male,104,96,100.3,21,"weakness, confusion","hypertension, diabetes",True,geriatric_age_sensitive
+P12,19,Female,100,110,98.8,16,"anxiety, palpitations",none,False,baseline_low
+P13,61,Male,126,164,99.6,22,chest pain,heart disease,True,high_risk_cardiac
+P14,37,Female,112,94,101.8,24,"fever, abdominal pain",unknown,False,zero_history_first_time
+P15,70,Female,92,150,98.2,17,fatigue,"diabetes, hypertension",True,geriatric_baseline
+P16,15,Male,105,118,99.5,18,ankle injury,none,True,adolescent_baseline
+P17,48,Male,88,128,98.6,15,rash,none,False,baseline_low
+P18,83,Female,112,88,99.8,24,"fall, confusion, weakness","heart disease, hypertension",True,geriatric_high_risk

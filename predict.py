@@ -5,6 +5,7 @@ import numpy as np
 from PIL import Image
 
 from features import MODEL_PATH, prepare_features
+from age_thresholds import vital_risk_flags, get_age_band
 
 model = joblib.load(MODEL_PATH)
 
@@ -97,6 +98,35 @@ def predict_patient(patient, uploaded_image=None):
         care_level = CARE_ESCALATION_MAP[care_level]
         escalation_reasons.append("Low model confidence – clinician review advised")
 
+    # --- Age-band safety cross-check -----------------------------------
+    # The trained model above was fit on fixed adult-calibrated vital
+    # thresholds (see generate_data.py). That means a pediatric or
+    # geriatric patient with vitals that are abnormal FOR THEIR AGE, but
+    # within the adult "normal" range, could be scored Low by the model
+    # while genuinely needing escalation. This cross-check catches that
+    # gap without needing to retrain the model — it runs the same vitals
+    # through age-specific thresholds (age_thresholds.py) and escalates
+    # if the model's fixed-threshold view would have missed something.
+    age_band = get_age_band(patient["Age"])
+    age_flags = vital_risk_flags(
+        age=patient["Age"],
+        heart_rate=patient["Heart_Rate"],
+        systolic_bp=patient["Systolic_BP"],
+        temperature=patient["Temperature"],
+    )
+    age_flag_count = sum(v for k, v in age_flags.items() if k.endswith("_flag"))
+
+    RISK_ORDER = ["Low", "Medium", "High"]
+    if age_flag_count >= 2 and RISK_ORDER.index(risk) < RISK_ORDER.index("Medium"):
+        risk = "Medium"
+        care_level = recommend_care_level(risk)
+        department = recommend_department(risk, patient["Symptoms"])
+        escalation_reasons.append(
+            f"Age-band safety check: vitals are abnormal for a {age_band} patient "
+            f"even though they fall within general adult-normal ranges — escalated "
+            f"per age-stratified thresholds."
+        )
+
     visual_irregularity = False
     if uploaded_image is not None:
         visual_irregularity = detect_skin_irregularity(uploaded_image)
@@ -123,6 +153,11 @@ def predict_patient(patient, uploaded_image=None):
         factors.append("High body temperature indicates possible systemic stress.")
     if "chest pain" in patient["Symptoms"]:
         factors.append("Chest pain is a high-priority triage symptom.")
+    if age_band in ("pediatric", "geriatric") and age_flag_count > 0:
+        factors.append(
+            f"{age_flag_count} vital sign(s) abnormal specifically for {age_band} "
+            f"age-band thresholds."
+        )
 
     return {
         "Risk_Level": risk,
@@ -132,4 +167,5 @@ def predict_patient(patient, uploaded_image=None):
         "Key_Factors": factors,
         "Escalation_Reasons": escalation_reasons,
         "Suggested_Specialties": specialties,
+        "Age_Band": age_band,
     }
