@@ -9,3 +9,4 @@ openpyxl
 opencv-python-headless
 pillow
 pdfplumber
+tensorflow-cpu
