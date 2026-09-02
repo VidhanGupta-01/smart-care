@@ -4,6 +4,10 @@ import cv2
 import numpy as np
 from PIL import Image
 
+import tensorflow as tf
+from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
+
 from features import MODEL_PATH, prepare_features
 from age_thresholds import vital_risk_flags, get_age_band
 
@@ -17,6 +21,15 @@ CARE_ESCALATION_MAP = {
     "ICU-level attention": "ICU-level attention"
 }
 
+_feature_extractor = MobileNetV2(
+    weights="imagenet", include_top=False, pooling="avg", input_shape=(224, 224, 3)
+)
+
+def extract_deep_features(img_224):
+    x = preprocess_input(img_224.astype("float32"))
+    x = tf.expand_dims(x, axis=0)
+    return _feature_extractor(x, training=False).numpy()[0]  
+
 def detect_skin_irregularity(uploaded_image):
     image = Image.open(uploaded_image).convert("RGB")
     img = np.array(image)
@@ -24,14 +37,16 @@ def detect_skin_irregularity(uploaded_image):
 
     hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
     _, s, v = cv2.split(hsv)
-
     color_variation = np.std(s) + np.std(v)
-
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     texture_variation = np.std(gray)
+    heuristic_score = color_variation + texture_variation
 
-    irregularity_score = color_variation + texture_variation
-    return irregularity_score > 40   
+    features = extract_deep_features(img)
+    deep_variation_score = np.std(features)
+
+    combined_score = heuristic_score + (deep_variation_score * 10) 
+    return combined_score > 40 
 
 def suggest_specialty(symptoms, conditions, vitals):
     specialties = set()
@@ -98,15 +113,7 @@ def predict_patient(patient, uploaded_image=None):
         care_level = CARE_ESCALATION_MAP[care_level]
         escalation_reasons.append("Low model confidence – clinician review advised")
 
-    # --- Age-band safety cross-check -----------------------------------
-    # The trained model above was fit on fixed adult-calibrated vital
-    # thresholds (see generate_data.py). That means a pediatric or
-    # geriatric patient with vitals that are abnormal FOR THEIR AGE, but
-    # within the adult "normal" range, could be scored Low by the model
-    # while genuinely needing escalation. This cross-check catches that
-    # gap without needing to retrain the model — it runs the same vitals
-    # through age-specific thresholds (age_thresholds.py) and escalates
-    # if the model's fixed-threshold view would have missed something.
+
     age_band = get_age_band(patient["Age"])
     age_flags = vital_risk_flags(
         age=patient["Age"],
