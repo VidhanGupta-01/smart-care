@@ -10,3 +10,4 @@ opencv-python-headless
 pillow
 pdfplumber
 tensorflow-cpu
+pytest
