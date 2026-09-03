@@ -1,5 +1,7 @@
 # Smart Care — PatientTriage.ai
 
+![CI](https://github.com/VidhanGupta-01/smart-care/actions/workflows/ci.yml/badge.svg)
+
 <img width="494" height="895" alt="smart_care_home (2)" src="https://github.com/user-attachments/assets/9ef37f6e-a9c0-4ccc-9447-0dbc005e54f0" />
 
 
@@ -32,6 +34,7 @@ This system addresses that with two integrated layers:
 | **Asymmetric cost, demonstrated** | Missing a critical case is worse than over-prioritizing a minor one. When confidence is below threshold, the system **escalates** the risk tier rather than leaving it as-is — implemented as an explicit, logged rule (`scoring.py: _apply_escalation_bias`), not left implicit in model weights. |
 | **Worst-case design** | The queue is continuously monitored — patients are re-assessed if their wait exceeds a safe interval for their risk tier, or if newly recorded vitals show deterioration. Tested under a simulated 3× surge. |
 | **Reviewable & overridable** | Every clinician override is logged with who overrode, what the system recommended, what was chosen instead, and why — the system's original call is never erased, only superseded. |
+├── .github/workflows/ci.yml    
 
 ---
 
@@ -93,6 +96,11 @@ Per the brief's instruction to state assumptions explicitly:
 | Confidence indicator on every output | `scoring.py` — `confidence` field always populated |
 | At least one clinician override, logged | `simulate_scenarios.py: scenario_override_demo()` |
 
+## Engineering Practices
+
+- **CI/CD:** GitHub Actions runs the test suite automatically on every push (`test_predict.py`, `test_env.py`)
+- **Deep learning:** Visual irregularity detection combines OpenCV heuristics with MobileNetV2 (TensorFlow) transfer-learned features
+
 ---
 
 ## Installation & Execution
@@ -140,7 +148,7 @@ python train_model.py --model adaboost      # retrain production model
 | ML | scikit-learn (AdaBoost), XGBoost, LightGBM (benchmarked) |
 | Queue engine | Pure Python, rule-based, no external ML dependency |
 | Data | Pandas, NumPy |
-| Document / Vision | pdfplumber, OpenCV, Pillow |
+| Document / Vision | pdfplumber, OpenCV, Pillow, TensorFlow (MobileNetV2 transfer learning) |
 | Reporting | Excel (openpyxl), Power BI, SQLite |
 
 ---
