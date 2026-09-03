@@ -1,4 +1,4 @@
-from src.predict import predict_patient
+from predict import predict_patient
 
 def test_low_risk_case():
     patient = {
