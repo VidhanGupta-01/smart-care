@@ -176,4 +176,4 @@ python train_model.py --model adaboost      # retrain production model
 ## Author
 
 **Vidhan Gupta**
-NIT Tiruchirappalli — Accenture Innovation Challenge 2026
+NIT Tiruchirappalli
