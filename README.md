@@ -1,4 +1,4 @@
-# Smart Care — PatientTriage.ai
+# Smart Care: AI-Powered Patient Triage Platform
 
 ![CI](https://github.com/VidhanGupta-01/smart-care/actions/workflows/ci.yml/badge.svg)
 
